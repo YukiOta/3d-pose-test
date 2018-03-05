@@ -291,8 +291,8 @@ def unNormalizeData(normalized_data, data_mean, data_std, dimensions_to_ignore):
   Returns
     orig_data: the input normalized_data, but unnormalized
   """
-  T = normalized_data.shape[0] # Batch size
-  D = data_mean.shape[0] # Dimensionality
+  T = normalized_data.shape[0]  # Batch size
+  D = data_mean.shape[0]# Dimensionality
 
   orig_data = np.zeros((T, D), dtype=np.float32)
   dimensions_to_use = np.array([dim for dim in range(D)
